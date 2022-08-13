@@ -1,38 +1,156 @@
-.App {
+body {
+  text-align: center;
+  background: radial-gradient(
+    circle at 10.6% 22.1%,
+    rgb(206, 18, 18) 0%,
+    rgb(122, 21, 21) 100.7%
+  );
+}
+form {
+  display: inline;
+  text-align: center;
+  margin: 20px;
+}
+
+input[type="text"] {
+  border: 2px solid #ee6666;
+  border-radius: 30px;
+  text-align: center;
+  font-size: 25px;
+  padding: 10px;
+}
+h2 {
+  text-align: left;
+  margin-top: 30px;
+  font-family: "Bebas Neue", cursive;
+  margin-left: 50px;
+}
+hr {
+  background-color: #ee6666;
+  height: 1px;
+  border: none;
+  position: relative;
+  bottom: 150px;
+}
+p {
+  color: black;
+  font-size: 30px;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #f9cccc;
+}
+
+.github-link:hover {
+  text-decoration: underline;
+  color: #f9cccc;
+}
+.wireframe {
+  text-align: center;
+  border: 5px solid #ee6666;
+  border-radius: 10px;
+  margin: 80px;
+  padding: 35px;
+  background-color: white;
+}
+.current-city,
+.search {
+  background-color: white;
+  color: #f9cccc;
+  border: 2px solid #f9cccc;
+  border-radius: 40px;
+  font-size: 25px;
+  transition: all 200ms ease-in-out;
+  padding: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.search {
+  padding-left: 35px;
+  padding-right: 35px;
+}
+.current-city {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.current-city:hover {
+  background: #f9cccc;
+  color: white;
+  cursor: pointer;
+}
+
+.search:hover {
+  background: #f9cccc;
+  color: white;
+  cursor: pointer;
+}
+.city-name {
+  text-align: left;
+  margin-top: 50px;
+  margin-left: 50px;
+  font-size: 60px;
+  font-family: "Bebas Neue", cursive;
+  font-weight: 800;
+}
+.icon {
+  color: #ff3030;
+  display: inline;
+  font-size: 44px;
+}
+.main {
+  font-size: 166px;
+  color: #ff3030;
+  display: inline;
+  position: relative;
+  bottom: 120px;
+  left: 50px;
+  width: 150px;
+  background-color: #e2000038;
+  border-radius: 56px;
+}
+.degree,
+.situation {
+  text-align: right;
+  color: #e20000;
+  position: relative;
+  bottom: 230px;
+  font-family: "Chakra Petch", sans-serif;
+}
+.degree {
+  position: relative;
+  bottom: 80px;
+}
+
+.situation {
+  position: relative;
+  bottom: 80px;
+}
+.extra-info {
+  text-align: right;
+  position: relative;
+  bottom: 100px;
+  font-size: 25px;
+  font-family: "Chakra Petch", sans-serif;
+}
+.row {
+  position: relative;
+  bottom: 60px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.col {
+  font-size: 24px;
+  color: gray;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  text-decoration: none;
+  color: #f9cccc;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+footer {
+  font-size: 10px;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Forecast {
+  display: inline;
 }
