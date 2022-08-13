@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 
 export default function Search() {
-  const [city, setCity] = useState("tehran");
+  const [city, setCity] = useState("");
   const [loaded, setLoaded] = useState(false);
   const [weather, setWeather] = useState({});
 
@@ -68,16 +68,6 @@ export default function Search() {
       </div>
     );
   } else {
-    return (
-      <div>
-        <span>
-          {" "}
-          hi i'm still working on my functions.For seeing the information just
-          press search 
-        </span>
-        <br />
-        {form}
-      </div>
-    );
+    return <div>{form}</div>;
   }
 }
