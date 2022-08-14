@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-export default function Search() {
-  const [city, setCity] = useState("");
+export default function Search(props) {
+  const [city, setCity] = useState(props.defaultCity);
   const [loaded, setLoaded] = useState(false);
   const [weather, setWeather] = useState({});
 
@@ -19,11 +19,16 @@ export default function Search() {
 
   function handleSumbit(event) {
     event.preventDefault();
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=3f99b1c138ce64911a1ec3ceb16fc81d&units=metric`;
+    searching();
+  }
+  function searching() {
+    const apiKey = "3f99b1c138ce64911a1ec3ceb16fc81d";
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(url).then(displayData);
   }
   function updateCity(event) {
     setCity(event.target.value);
+    console.log(event.target.value);
   }
 
   const form = (

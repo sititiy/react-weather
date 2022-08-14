@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <div className="container">
         <div className="wireframe">
-          <Search />
+          <Search defaultCity="tehran" />
           <br />
           <br />
           <br />
