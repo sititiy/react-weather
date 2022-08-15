@@ -33,25 +33,16 @@ export default function Search(props) {
 
   const form = (
     <form onSubmit={handleSumbit}>
-      <input
-        type="submit"
-        value="Current City"
-        className="search"
-        onChange={updateCity}
-      />
+      <input type="submit" value="Current City" className="search" />
       <input
         type="text"
         placeholder="Enter your city"
         autoFocus="off"
         autoComplete="off"
-      />
-
-      <input
-        type="submit"
-        value="search"
-        className="search"
         onChange={updateCity}
       />
+
+      <input type="submit" value="search" className="search" />
     </form>
   );
 
