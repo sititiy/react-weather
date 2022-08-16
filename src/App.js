@@ -8,12 +8,14 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <div className="wireframe">
-          <Search defaultCity="tehran" />
-          <br />
-          <br />
-          <br />
-          <Footer />
+        <div className="container">
+          <div className="wireframe">
+            <Search defaultCity="tehran" />
+            <br />
+            <br />
+            <br />
+            <Footer />
+          </div>
         </div>
       </div>
     </div>
