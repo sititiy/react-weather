@@ -11,8 +11,17 @@ export default function Footer() {
           className="github-link"
         >
           Open-source code
+        </a>{" "}
+        by
+        <a
+          href="https://spectacular-llama-92e0d2.netlify.app/"
+          target="_blank"
+          rel="noreferrer"
+          className="github-link"
+        >
+          {" "}
+          Setayesh
         </a>
-        by Setayesh
       </footer>
     </div>
   );
