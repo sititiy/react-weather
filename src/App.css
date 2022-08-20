@@ -124,6 +124,20 @@ a {
   bottom: 80px;
 }
 
+.unit {
+  font-size: 20px;
+  color: #f9cccc;
+  position: relative;
+  bottom: 15px;
+}
+.unit a {
+  color: #e20000;
+  text-decoration: none;
+}
+.unit a:hover {
+  color: #e20000;
+}
+
 .situation {
   position: relative;
   bottom: 80px;

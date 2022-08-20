@@ -1,5 +1,6 @@
 import React from "react";
 import TellDate from "./TellDate";
+import WeatherTemp from "./WeatherTemp";
 
 export default function WeartherInfo(props) {
   return (
@@ -8,7 +9,10 @@ export default function WeartherInfo(props) {
       <h2>
         <TellDate date={props.info.date} />
       </h2>
-      <h1 className="degree"> {Math.round(props.info.temperature)}°C </h1>
+
+      <div>
+        <WeatherTemp celsius={props.info.temperature} />
+      </div>
       <img
         src={props.info.icon}
         alt={props.info.description}
