@@ -1,5 +1,3 @@
-import react from "react";
-
 export default function TellDate(props) {
   let days = [
     "Sunday",
