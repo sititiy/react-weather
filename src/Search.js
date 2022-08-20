@@ -1,21 +1,20 @@
 import React, { useState } from "react";
 import axios from "axios";
-import TellDate from "./TellDate";
-
+import WeartherInfo from "./WeatherInfo";
 export default function Search(props) {
   const [city, setCity] = useState(props.defaultCity);
-  const [loaded, setLoaded] = useState(false);
-  const [weather, setWeather] = useState({});
+  const [weather, setWeather] = useState({ loading: false });
 
   function displayData(response) {
-    setLoaded(true);
     setWeather({
+      loading: true,
       temperature: response.data.main.temp,
       date: new Date(response.data.dt * 1000),
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       description: response.data.weather[0].description,
+      city: response.data.name,
     });
   }
 
@@ -47,27 +46,18 @@ export default function Search(props) {
     </form>
   );
 
-  if (loaded) {
+  if (weather.loading) {
     return (
       <div>
         {form}
         <br />
         <br />
         <br />
-        <h1 className="city-name">{city}</h1>
-        <h2>
-          <TellDate date={weather.date} />
-        </h2>
-        <h1 className="degree"> {Math.round(weather.temperature)}°C </h1>
-        <img src={weather.icon} alt={weather.description} className="main" />
-        <p className="situation"> {weather.description} </p>
-        <ul>
-          <li className="extra-info">Humidity: {weather.humidity}%</li>
-          <li className="extra-info">Wind: {Math.round(weather.wind)}km/h</li>
-        </ul>
+        <WeartherInfo info={weather} />
       </div>
     );
   } else {
+    searching();
     return <div>{form}</div>;
   }
 }
