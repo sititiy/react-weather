@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import TellDate from "./TellDate";
 
 export default function Search(props) {
   const [city, setCity] = useState(props.defaultCity);
@@ -10,6 +11,7 @@ export default function Search(props) {
     setLoaded(true);
     setWeather({
       temperature: response.data.main.temp,
+      date: new Date(response.data.dt * 1000),
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
@@ -53,6 +55,9 @@ export default function Search(props) {
         <br />
         <br />
         <h1 className="city-name">{city}</h1>
+        <h2>
+          <TellDate date={weather.date} />
+        </h2>
         <h1 className="degree"> {Math.round(weather.temperature)}°C </h1>
         <img src={weather.icon} alt={weather.description} className="main" />
         <p className="situation"> {weather.description} </p>
