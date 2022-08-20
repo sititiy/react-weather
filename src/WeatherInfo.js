@@ -14,7 +14,7 @@ export default function WeartherInfo(props) {
         alt={props.info.description}
         className="main"
       />
-      <p className="situation"> {props.info.description} </p>
+      <p className="situation text-capitalize"> {props.info.description} </p>
       <ul>
         <li className="extra-info">Humidity: {props.info.humidity}%</li>
         <li className="extra-info">Wind: {Math.round(props.info.wind)}km/h</li>
