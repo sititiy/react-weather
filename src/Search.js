@@ -56,6 +56,10 @@ export default function Search(props) {
         <br />
         <br />
         <WeartherInfo info={weather} />
+        <br />
+        <br />
+        <br />
+        <hr />
         <WeatherForecast coords={weather.coordinates} />
       </div>
     );

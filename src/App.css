@@ -185,3 +185,6 @@ footer {
 .weather-forecast-temp-min {
   opacity: 0.4;
 }
+.WeatherForecast {
+  text-align: center;
+}
