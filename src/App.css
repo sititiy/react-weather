@@ -173,3 +173,15 @@ footer {
 .Forecast {
   display: inline;
 }
+
+.weather-forecast {
+  text-align: center;
+}
+
+.weather-forecast-day {
+  font-size: 24px;
+  opacity: 0.8;
+}
+.weather-forecast-temp-min {
+  opacity: 0.4;
+}
